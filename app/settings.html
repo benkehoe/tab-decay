@@ -1,0 +1,59 @@
+<!--
+Copyright 2022 Ben Kehoe
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="errors"></div>
+    <div id="defaults">
+        <label>Default half-life: <input id="halflife" type="number" /></label>
+        <select id="units">
+            <option value="hours" checked>hours</option>
+            <option value="days">days</option>
+            <option value="weeks">weeks</option>
+        </select>
+    </div>
+    <div>
+        Example settings:
+<pre>{
+    "exempt_domains": [],
+    "exempt_url_patterns": [],
+    "sites": [
+        {
+            "domain": "example.com",
+            "halflife": "1",
+            "units": "hours" // hours, days, weeks
+        },
+        {
+            "url_pattern": "^https://[^.]+\.example\.com",
+            "halflife": "3",
+            "units": "weeks"
+        }
+    ]
+}
+</pre>
+    </div>
+    <div>
+        <textarea id="settings" rows="20" cols="80"></textarea>
+    </div>
+    <div>
+        <button id="save">Save</button>
+    </div>
+    <script src="settings.js"></script>
+</body>
+
+</html>

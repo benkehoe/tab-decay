@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Tab decay",
+    "version": "0.1",
+    "description": "Automatically close your tabs over time",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "app/background.js"
+    },
+    "options_page": "app/settings.html"
+}
